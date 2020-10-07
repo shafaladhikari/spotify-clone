@@ -1,0 +1,26 @@
+header {
+  background: $color-content;
+  grid-row: 1/2;
+  grid-column: 2/3;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 3rem;
+  .headIcon {
+    display: inline-flex;
+    .Icon {
+      height: 3.5rem;
+      width: 3.5rem;
+      fill: $font-secondary;
+      cursor: pointer;
+      margin-right: 1rem;
+      svg {
+        width: 2.4rem;
+        height: 2.4rem;
+      }
+    }
+  }
+}
+header.scrolled {
+  background: $color-header;
+}

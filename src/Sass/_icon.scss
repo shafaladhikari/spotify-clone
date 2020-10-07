@@ -1,0 +1,39 @@
+.Icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: 0.1s;
+  height: 3.5rem;
+  width: 3.5rem;
+}
+.rounded {
+  position: relative;
+  z-index: 1;
+}
+.rounded::before {
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  z-index: -1;
+  background: $color-header;
+  border-radius: 50%;
+}
+.Button {
+  width: 15rem;
+  height: 3.8rem;
+  border-radius: 3.8rem;
+  background: none;
+  color: #ffffff;
+  outline: none;
+  border: 1px solid $font-secondary;
+  font-family: inherit;
+  font-weight: 600;
+  font-size: 1.2rem;
+  text-transform: uppercase;
+  transition: 0.1s;
+  &:hover {
+    transform: scale(1.1);
+    cursor: pointer;
+  }
+}

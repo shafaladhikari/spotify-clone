@@ -1,0 +1,14 @@
+$color-nav: #040404;
+$color-header: #070707;
+$color-player: #282828;
+$color-content: #121212;
+$font-secondary: #b3b3b3;
+$color-secondary: #525252;
+$background-primary: #1db954;
+@import "sass/main";
+@import "sass/header";
+@import "sass/nav";
+@import "sass/player";
+@import "sass/content";
+@import "sass/icon";
+@import "sass/playlist";

@@ -1,0 +1,379 @@
+*,
+*::after,
+*::before {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  font-weight: 400;
+  font-size: 62.5%;
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+}
+
+main {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 23rem 1fr;
+      grid-template-columns: 23rem 1fr;
+  -ms-grid-rows: 6rem 1fr 9rem;
+      grid-template-rows: 6rem 1fr 9rem;
+  height: 100vh;
+}
+
+header {
+  background: #121212;
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 1;
+  grid-row: 1/2;
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 1;
+  grid-column: 2/3;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 0 3rem;
+}
+
+header .headIcon {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+}
+
+header .headIcon .Icon {
+  height: 3.5rem;
+  width: 3.5rem;
+  fill: #b3b3b3;
+  cursor: pointer;
+  margin-right: 1rem;
+}
+
+header .headIcon .Icon svg {
+  width: 2.4rem;
+  height: 2.4rem;
+}
+
+header.scrolled {
+  background: #070707;
+}
+
+nav {
+  background: #040404;
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 2;
+  grid-row: 1/3;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 1;
+  grid-column: 1/2;
+  padding: 1rem 0.8rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  font-weight: 600;
+}
+
+nav .Logo {
+  width: 13.1rem;
+  margin: 1.4rem;
+  padding: 0;
+}
+
+nav ul li {
+  padding: 0 1.6rem;
+  height: 4rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: #b3b3b3;
+  border-radius: 0.4rem;
+  font-size: 1.3rem;
+  cursor: pointer;
+  -webkit-transition: 0.2s ease;
+  transition: 0.2s ease;
+}
+
+nav ul li.active {
+  background: #282828;
+  color: #ffffff;
+}
+
+nav ul li.active svg {
+  fill: #ffffff;
+}
+
+nav ul li:hover {
+  color: #ffffff;
+}
+
+nav ul li:hover svg {
+  fill: #ffffff;
+}
+
+nav ul li svg {
+  fill: #b3b3b3;
+  width: 2.4rem;
+  height: 2.4rem;
+  margin-right: 1.5rem;
+  -webkit-transition: 0.2s ease;
+  transition: 0.2s ease;
+}
+
+nav .Playlist {
+  color: #b3b3b3;
+  padding: 0 1.5rem;
+  margin-top: 1rem;
+}
+
+nav .Playlist ul {
+  border-bottom: 1px solid #b3b3b3;
+}
+
+nav .Playlist__heading {
+  font-size: 1.3rem;
+  text-transform: uppercase;
+}
+
+nav .Playlist__names {
+  border-bottom: 0px !important;
+  padding: 1.5rem 0;
+}
+
+nav .Playlist__names li {
+  height: 3rem;
+}
+
+nav .Playlist__names li svg {
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+nav .Playlist__create {
+  padding: 0;
+}
+
+nav .Playlist ul li {
+  padding: 0;
+}
+
+nav .Install {
+  padding: 0;
+}
+
+nav .Install li svg {
+  width: 1.8rem;
+  height: 1.8rem;
+}
+
+.Player {
+  background: #282828;
+  -ms-grid-row: 3;
+  -ms-grid-row-span: 1;
+  grid-row: 3/4;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 3;
+  grid-column: 1/4;
+}
+
+.Content {
+  -ms-grid-row: 2;
+  -ms-grid-row-span: 1;
+  grid-row: 2/3;
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 1;
+  grid-column: 2/3;
+  background: #121212;
+  padding: 0 3rem;
+  overflow: auto;
+}
+
+.Content::-webkit-scrollbar {
+  width: 1rem;
+}
+
+.Content::-webkit-scrollbar-track {
+  background: none;
+}
+
+.Content::-webkit-scrollbar-thumb {
+  background: #525252;
+}
+
+.Icon {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-transition: 0.1s;
+  transition: 0.1s;
+  height: 3.5rem;
+  width: 3.5rem;
+}
+
+.rounded {
+  position: relative;
+  z-index: 1;
+}
+
+.rounded::before {
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  z-index: -1;
+  background: #070707;
+  border-radius: 50%;
+}
+
+.Button {
+  width: 15rem;
+  height: 3.8rem;
+  border-radius: 3.8rem;
+  background: none;
+  color: #ffffff;
+  outline: none;
+  border: 1px solid #b3b3b3;
+  font-family: inherit;
+  font-weight: 600;
+  font-size: 1.2rem;
+  text-transform: uppercase;
+  -webkit-transition: 0.1s;
+  transition: 0.1s;
+}
+
+.Button:hover {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+  cursor: pointer;
+}
+
+.Playlist {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin: 2rem 0;
+}
+
+.Playlist__heading {
+  font-size: 2.2rem;
+  color: white;
+  font-weight: 700;
+}
+
+.Playlist__subheading {
+  font-size: 1.3rem;
+  margin-top: 0.8rem;
+  font-weight: 500;
+  color: #b3b3b3;
+}
+
+.Playlist .List {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.Playlist .List .ListItem {
+  width: 16rem;
+  height: 23rem;
+  margin-top: 2rem;
+  -webkit-transition: 0.1s;
+  transition: 0.1s;
+  padding: 2rem;
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  background: #282828;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  border-radius: 1rem;
+  cursor: pointer;
+}
+
+.Playlist .List .ListItem__photo {
+  width: 100%;
+  height: 60%;
+}
+
+.Playlist .List .ListItem__heading {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #ffffff;
+}
+
+.Playlist .List .ListItem__subheading {
+  font-size: 1rem;
+  font-weight: 500;
+  color: #b3b3b3;
+}
+
+.Playlist .List .ListItem:hover .rounded {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.Playlist .List .ListItem .rounded {
+  position: absolute;
+  display: none;
+  right: 8%;
+  bottom: 5%;
+}
+
+.Playlist .List .ListItem .rounded svg {
+  fill: #ffffff;
+  width: 1.8rem;
+  height: 1.8rem;
+}
+
+.Playlist .List .ListItem .rounded:hover::before {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+}
+
+.Playlist .List .ListItem .rounded::before {
+  background: #1db954;
+  -webkit-transition: 0.1s;
+  transition: 0.1s;
+}
+/*# sourceMappingURL=App.css.map */

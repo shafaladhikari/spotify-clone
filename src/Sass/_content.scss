@@ -1,0 +1,16 @@
+.Content {
+  grid-row: 2/3;
+  grid-column: 2/3;
+  background: $color-content;
+  padding: 0 3rem;
+  overflow: auto;
+  &::-webkit-scrollbar {
+    width: 1rem;
+    &-track {
+      background: none;
+    }
+    &-thumb {
+      background: $color-secondary;
+    }
+  }
+}
